@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Loom Creations</title>
+  <meta name="description" content="Clean, mobile-first showcase for Android apps by App Loom Creations featuring Dhunu Moods." />
+  <meta property="og:title" content="App Loom Creations" />
+  <meta property="og:description" content="Clean, mobile-first showcase for Android apps by App Loom Creations featuring Dhunu Moods." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/dhunu-moods.png" />
+  <meta name="twitter:card" content="summary" />
+  
+  <!-- Favicon (SVG + PNG fallback) -->
+  <link rel="icon" type="image/svg+xml" href="assets/dhunu-moods.svg" />
+  <link rel="alternate icon" type="image/png" href="assets/dhunu-moods.png" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <div class="page-container">
+
+    <!-- ====================================================================
+         1. MAIN HEADER
+         ==================================================================== -->
+    <header class="site-header">
+      <h1 class="brand-title">App Loom Creations</h1>
+      <p class="brand-subtitle">Thoughtful, simple, and beautifully crafted apps designed for everyday life.</p>
+    </header>
+
+    <!-- ====================================================================
+         2. APP SECTION
+         ==================================================================== -->
+    <main class="apps-container" aria-label="Featured Android Applications">
+      
+      <!-- APP CARD: DHUNU MOODS -->
+      <article class="app-card">
+        
+        <!-- Clickable Header: Icon + Details (Opens Google Play) -->
+        <a 
+          href="https://play.google.com/store/apps/details?id=com.dhunu.moods" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="app-header-clickable"
+          title="Open Dhunu Moods on Google Play"
+        >
+          <!-- App Icon with Bulletproof Permanent Display Fallback -->
+          <div class="app-icon-wrapper">
+            <img 
+              src="assets/dhunu-moods.png" 
+              alt="Dhunu Moods App Icon" 
+              class="app-icon-img"
+              loading="eager"
+              onerror="if(!this.dataset.retry){this.dataset.retry='root';this.src='dhunu-moods.png';}else if(this.dataset.retry==='root'){this.dataset.retry='svg';this.src='assets/dhunu-moods.svg';}else{this.style.display='none';var fb=this.nextElementSibling;if(fb){fb.style.display='block';}}"
+            />
+            <!-- Always-available embedded SVG fallback (guarantees logo displays even if image file is missing) -->
+            <svg class="app-icon-img app-icon-fallback" viewBox="0 0 512 512" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dhunu Moods App Icon" style="display:none;">
+              <rect width="512" height="512" fill="#ffffff"/>
+              <circle cx="256" cy="256" r="202" fill="#7ee287"/>
+              <path d="M 152 238 C 166 268 214 268 228 238" fill="none" stroke="#0c1935" stroke-width="24" stroke-linecap="round"/>
+              <path d="M 284 238 C 298 268 346 268 360 238" fill="none" stroke="#0c1935" stroke-width="24" stroke-linecap="round"/>
+              <path d="M 198 316 C 222 358 290 358 314 316" fill="none" stroke="#0c1935" stroke-width="24" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="app-meta">
+            <span class="app-category">Mood Tracking</span>
+            <h2 class="app-name">Dhunu Moods</h2>
+            <div class="app-platform-tag">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993 0 .5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9994.4482.9994.9993 0 .5511-.4483.9997-.9994.9997m11.4045-6.02l1.9964-3.4578a.4162.4162 0 00-.1523-.5676.416.416 0 00-.5682.1524l-2.0223 3.503C15.5902 8.411 13.8566 8.125 12 8.125c-1.857 0-3.5907.286-5.132.8264L4.846 5.4484a.4162.4162 0 00-.5682-.1524.416.416 0 00-.1523.5676l1.9964 3.4578C2.688 11.2868 0 14.858 0 19h24c0-4.142-2.688-7.7132-6.1185-9.6786"/>
+              </svg>
+              <span>Available on Google Play</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Description (Also clickable to Google Play) -->
+        <a 
+          href="https://play.google.com/store/apps/details?id=com.dhunu.moods" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="app-description"
+        >
+          A simple mood tracking app to record and understand your feelings.
+        </a>
+
+        <!-- Large, Highly Visible "Install on Google Play" Button -->
+        <a 
+          href="https://play.google.com/store/apps/details?id=com.dhunu.moods" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-install"
+          aria-label="Install Dhunu Moods on Google Play Store"
+        >
+          <!-- Google Play Colored Tri-Color Vector Logo -->
+          <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M48.2 24.3C40.6 32.3 36 44.5 36 60.1v391.8c0 15.6 4.6 27.8 12.2 35.8l2.2 2.1 223-223v-5.2l-223-223-2.2 2.4z" fill="#00E676"/>
+            <path d="M347.8 321.4l-74.4-74.5v-5.2l74.4-74.5 2.5 1.4 88.2 50.1c25.2 14.3 25.2 37.7 0 52.1l-88.2 50.1-2.5 1.6z" fill="#FFD600"/>
+            <path d="M273.4 246.9L48.2 489.7c8.3 8.8 22 9.9 37.7 1l263.2-149.6-75.7-94.2z" fill="#FF1744"/>
+            <path d="M273.4 246.9l75.7-94.2L85.9 3.1C70.2-5.8 56.5-4.7 48.2 4.1l225.2 242.8z" fill="#00B0FF"/>
+          </svg>
+          <span>Install on Google Play</span>
+        </a>
+
+      </article>
+
+    </main>
+
+    <!-- ====================================================================
+         3. FOOTER
+         ==================================================================== -->
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 App Loom Creations</p>
+      <p class="footer-note">Crafted for Android. Google Play and the Google Play logo are trademarks of Google LLC.</p>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
+
+</body>
+</html>

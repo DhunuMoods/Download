@@ -1,0 +1,6 @@
+{
+  "name": "App Loom Creations",
+  "description": "Clean, mobile-first showcase for Android apps by App Loom Creations featuring Dhunu Moods.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,284 @@
+/* ==========================================================================
+   APP LOOM CREATIONS - STYLESHEET (style.css)
+   ==========================================================================
+   Clean, modern, lightweight, mobile-first design for GitHub Pages.
+   No frameworks, no external font downloads, fast-loading on mobile networks.
+   ========================================================================== */
+
+:root {
+  /* Brand & Theme Colors */
+  --bg-primary: #0b0f17;
+  --bg-secondary: #131b28;
+  --card-bg: #161f30;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border-hover: rgba(52, 211, 153, 0.35);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --accent-green: #10b981;
+  --playstore-green: #01875f;
+  --playstore-green-hover: #017351;
+  --playstore-dark: #004d36;
+
+  --badge-bg: rgba(16, 185, 129, 0.12);
+  --badge-text: #34d399;
+  --badge-border: rgba(16, 185, 129, 0.25);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.45), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-btn: 0 8px 20px -4px rgba(1, 135, 95, 0.45);
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 50% 0%, #152238 0%, #0b0f17 55%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  padding: 0;
+  margin: 0;
+}
+
+/* Page Container (Optimized for Mobile & Desktop) */
+.page-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 18px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ==========================================================================
+   HEADER SECTION
+   ========================================================================== */
+.site-header {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.brand-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.brand-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   APP SECTION & APP CARDS
+   ========================================================================== */
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title svg {
+  color: var(--accent-green);
+}
+
+.apps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Clickable App Card Wrapper */
+.app-card {
+  position: relative;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.app-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--card-border-hover);
+  box-shadow: 0 14px 30px -6px rgba(0, 0, 0, 0.55), 0 0 20px -4px rgba(16, 185, 129, 0.15);
+}
+
+/* App Top Row: Icon + Info */
+.app-header-clickable {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+/* App Icon: Uniform squircle shape matching Google Play standards */
+.app-icon-wrapper {
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.app-icon-img,
+.app-icon-fallback {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.app-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-category {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--badge-text);
+  background-color: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+}
+
+.app-name {
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-platform-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.app-platform-tag svg {
+  width: 14px;
+  height: 14px;
+  color: #34d399;
+}
+
+/* App Description */
+.app-description {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Prominent Google Play Button */
+.btn-install {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: linear-gradient(135deg, #01875f 0%, #016b4b 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-btn);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.btn-install:hover {
+  background: linear-gradient(135deg, #029f70 0%, #01875f 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px -2px rgba(1, 135, 95, 0.6);
+}
+
+.btn-install:active {
+  transform: scale(0.985);
+  box-shadow: 0 4px 12px -2px rgba(1, 135, 95, 0.4);
+}
+
+.btn-install svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   FOOTER SECTION
+   ========================================================================== */
+.site-footer {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-border);
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.footer-copy {
+  margin-bottom: 4px;
+}
+
+.footer-note {
+  font-size: 0.74rem;
+  color: #475569;
+}
